@@ -1,9 +1,9 @@
 {
-  "versionCode": 7,
-  "versionName": "1.6",
-  "apkUrl": "https://github.com/aias2002/Adhan-/releases/download/v1.6/AdhanPlus.apk",
+  "versionCode": 8,
+  "versionName": "1.7",
+  "apkUrl": "https://github.com/aias2002/Adhan-/releases/download/v1.6/Adhan%2B.apk",
   "changelog": {
-    "ar": "تحسينات جديدة في أصوات الأذان وتخصيص الفجر والتحديثات",
-    "en": "New improvements for Adhan sounds, Fajr and updates"
+    "ar": "تحديث جديد يتضمن تحسين أصوات الأذان وتخصيص الفجر واستقرار التحديثات",
+    "en": "New update with Adhan improvements and direct download"
   }
 }
