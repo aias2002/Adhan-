@@ -1,9 +1,9 @@
 {
-  "versionCode": 8,
-  "versionName": "1.7",
-  "apkUrl": "https://www.mediafire.com/file/v3yjntcyqfxlbnr/Adhan%2B.apk/file",
+  "versionCode": 7,
+  "versionName": "1.6",
+  "apkUrl": "https://github.com/aias2002/Adhan-/releases/download/v1.6/AdhanPlus.apk",
   "changelog": {
-    "ar": "تحديث جديد لتحسين أصوات الأذان والتنبيهات",
-    "en": "New update with Adhan and alert improvements"
+    "ar": "تحسينات جديدة في أصوات الأذان وتخصيص الفجر والتحديثات",
+    "en": "New improvements for Adhan sounds, Fajr and updates"
   }
 }
