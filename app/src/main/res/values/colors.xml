@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#2D2C54</color>
+    <color name="primary_dark_green">#1B5E46</color>
+    <color name="secondary_light_green">#E8F3F0</color>
+    <color name="medium_gray">#6B7280</color>
+    <color name="dark_black">#1F2937</color>
+    <color name="pure_white">#FFFFFF</color>
+    <color name="light_gold">#D4AF37</color>
+    <color name="dark_bg">#0F172A</color>
+    <color name="dark_card_bg">#1F2937</color>
+</resources>

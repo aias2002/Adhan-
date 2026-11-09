@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_vertical_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_prayer_widget_dark"
+    android:clipToOutline="true">
+
+    <!-- Dynamic Mosque Background Image -->
+    <ImageView
+        android:id="@+id/iv_vertical_mosque_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- Dark Contrast Overlay to ensure all prayer texts remain easily readable -->
+    <ImageView
+        android:id="@+id/iv_vertical_dark_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="#40000000"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/widget_vertical_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:layoutDirection="rtl">
+
+    <!-- 1. Fajr -->
+    <LinearLayout
+        android:id="@+id/row_vertical_fajr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_fajr_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="الفجر"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_fajr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_fajr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="05:26"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 2. Sunrise -->
+    <LinearLayout
+        android:id="@+id/row_vertical_sunrise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_sunrise_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="الشروق"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_sunrise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="06:47"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 3. Dhuhr -->
+    <LinearLayout
+        android:id="@+id/row_vertical_dhuhr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_dhuhr_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="الظهر"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_dhuhr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_dhuhr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="12:23"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 4. Asr -->
+    <LinearLayout
+        android:id="@+id/row_vertical_asr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_asr_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="العصر"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_asr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_asr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="03:35"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 5. Maghrib -->
+    <LinearLayout
+        android:id="@+id/row_vertical_maghrib"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_maghrib_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="المغرب"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_maghrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_maghrib_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="06:05"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 6. Isha -->
+    <LinearLayout
+        android:id="@+id/row_vertical_isha"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_isha_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="العشاء"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_vertical_isha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:visibility="gone"
+            android:textColor="#4ADE80"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:format="%s" />
+
+        <TextView
+            android:id="@+id/tv_vertical_isha_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="07:17"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 7. Bottom Live TextClock (Synchronized with device clock in place of M31H8) -->
+    <LinearLayout
+        android:id="@+id/ll_vertical_clock_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="2dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vertical_clock_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الساعة الآن: "
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:layout_marginEnd="6dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+
+        <TextClock
+            android:id="@+id/tc_vertical_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm"
+            android:format24Hour="HH:mm"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#CC000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

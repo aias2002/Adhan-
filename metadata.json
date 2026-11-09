@@ -1,0 +1,6 @@
+{
+  "name": "Adhan+",
+  "description": "تطبيق مواقيت الصلاة والعد التنازلي مع المصحف الشريف بروايتي ورش وحفص وتحديد الموقع للجزائر.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

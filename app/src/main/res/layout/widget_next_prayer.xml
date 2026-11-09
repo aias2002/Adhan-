@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_next_prayer_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_compact_widget"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+    android:layoutDirection="rtl">
+
+    <!-- Hidden Location TextView for compatibility -->
+    <TextView
+        android:id="@+id/tv_next_prayer_location"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!-- Prayer Name and Countdown in a single prominent centered row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_next_prayer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="الظهر"
+            android:textColor="#1E4A38"
+            android:textSize="26sp"
+            android:includeFontPadding="false"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_next_prayer_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_next_prayer_countdown_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#1E4A38"
+                android:textSize="22sp"
+                android:includeFontPadding="false"
+                android:textStyle="bold" />
+
+            <Chronometer
+                android:id="@+id/chronometer_next_prayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1E4A38"
+                android:textSize="22sp"
+                android:includeFontPadding="false"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_compact_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_compact_widget"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:layoutDirection="rtl">
+
+    <!-- Top Info: City & Dates -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:id="@+id/tv_compact_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ورقلة"
+            android:textColor="#5C6B63"
+            android:textSize="10sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_compact_gregorian"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="الأحد، 11 أكتوبر 2026"
+                android:textColor="#5C6B63"
+                android:textSize="9sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_compact_hijri"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="الأحد، 28 ربيع الثاني 1448 هـ"
+                android:textColor="#5C6B63"
+                android:textSize="9sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Top Label -->
+    <TextView
+        android:id="@+id/tv_compact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الصلاة القادمة"
+        android:textColor="#5C6B63"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Next Prayer Name in Large Dark Green/Charcoal -->
+    <TextView
+        android:id="@+id/tv_compact_prayer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="الفجر"
+        android:textColor="#1E4A38"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Prayer Time -->
+    <TextView
+        android:id="@+id/tv_compact_prayer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="05:12 AM"
+        android:textColor="#3A4A42"
+        android:textSize="12sp" />
+
+    <!-- Countdown / Remaining Time with Chronometer -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_countdown_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="1dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_compact_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            android:textColor="#1E4A38"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/chronometer_compact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1E4A38"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

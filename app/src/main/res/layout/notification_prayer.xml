@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="84dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_prayer_notification"
+    android:layoutDirection="locale"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <!-- Line 1: الأذان القادم : الفجر 05:33 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="locale"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:id="@+id/tv_notification_next_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الأذان القادم : "
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_notification_next_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الفجر 05:33"
+            android:textColor="#38BDF8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <!-- Line 2: الوقت المتبقي : 08:01:31 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="locale"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:id="@+id/tv_notification_remaining_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الوقت المتبقي : "
+            android:textColor="#E2E8F0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <Chronometer
+            android:id="@+id/chrono_notification_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F59E0B"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Line 3: مضى على اذان العشاء : 00:00:00 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="locale"
+        android:gravity="center_vertical|start">
+
+        <TextView
+            android:id="@+id/tv_notification_elapsed_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مضى على اذان العشاء : "
+            android:textColor="#94A3B8"
+            android:textSize="13.5sp"
+            android:singleLine="true" />
+
+        <Chronometer
+            android:id="@+id/chrono_notification_elapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#94A3B8"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
